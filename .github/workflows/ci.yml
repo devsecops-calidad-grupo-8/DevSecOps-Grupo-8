@@ -53,6 +53,9 @@ jobs:
       - name: Instalar dependencias
         run: npm ci
 
+      - name: Ejecutar tests unitarios con cobertura
+        run: npm run test:unit
+
       # 5. Ejecutar las pruebas de la Actividad 5.
       # HOME=/root: Firefox no arranca dentro del contenedor si $HOME
       # pertenece a otro usuario (workaround indicado por Playwright).
